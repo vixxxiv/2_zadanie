@@ -19,12 +19,6 @@ export class Dashboard {
             case 'quote':
                 widget = new QuoteWidget(config);
                 break;
-            case 'weather':
-                widget = new WeatherWidget(config);
-                break;
-            case 'stats':
-                widget = new StatsWidget(config);
-                break;
             default:
                 console.error('Неизвестный тип виджета:', widgetType);
                 return;
