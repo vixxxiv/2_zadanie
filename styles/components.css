@@ -1,0 +1,287 @@
+/* Стили для виджетов */
+.widget {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.widget-header {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widget-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.widget-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.minimize-btn, .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.minimize-btn:hover {
+    background: #e9ecef;
+}
+
+.close-btn:hover {
+    background: #dc3545;
+    color: white;
+}
+
+.widget-content {
+    padding: 1rem;
+}
+
+/* Стили для ToDoWidget */
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.todo-input {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.task-input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.add-task-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-task-btn:hover {
+    background: #0056b3;
+}
+
+.task-list {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.task:last-child {
+    border-bottom: none;
+}
+
+.task.completed .task-text {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.task-text {
+    flex: 1;
+}
+
+.delete-task {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.delete-task:hover {
+    background: #f8d7da;
+}
+
+.todo-stats {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+    padding-top: 0.5rem;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Стили для QuoteWidget */
+.quote-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.quote-author {
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.refresh-quote {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-self: center;
+}
+
+.refresh-quote:hover {
+    background: #218838;
+}
+
+/* Стили для WeatherWidget */
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.weather-location {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.weather-temp {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.weather-desc {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.refresh-weather {
+    background: #17a2b8;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-self: center;
+}
+
+.refresh-weather:hover {
+    background: #138496;
+}
+
+.weather-error {
+    color: #dc3545;
+    text-align: center;
+}
+
+/* Стили для StatsWidget */
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stats-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.stats-label {
+    color: #6c757d;
+}
+
+.stats-value {
+    font-weight: 500;
+}
+
+.stats-chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    height: 100px;
+    margin: 1rem 0;
+}
+
+.chart-bar {
+    width: 30px;
+    background: linear-gradient(to top, #6a11cb, #2575fc);
+    border-radius: 3px 3px 0 0;
+}
+
+.refresh-stats {
+    background: #6f42c1;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-self: center;
+}
+
+.refresh-stats:hover {
+    background: #5a2d91;
+}
+
+.stats-error {
+    color: #dc3545;
+    text-align: center;
+}
